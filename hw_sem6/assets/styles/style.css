@@ -172,6 +172,7 @@ ul {
 
 
 }
+
 .box-container {
     display: flex;
     width: 1200px;
@@ -179,20 +180,25 @@ ul {
     margin-left: auto;
     margin-right: auto;
     gap: 30px;
+
 }
+
 .box-border {
     border: 1px solid #000;
     background: #FFF;
-box-shadow: 15px 25px 56px 6px rgba(0, 0, 0, 0.06);
+    box-shadow: 15px 25px 56px 6px rgba(0, 0, 0, 0.06);
 }
-.box-item1 {    
+
+.box-item1 {
     display: flex;
+    flex-direction: column;
+    align-content: center;
     width: 380px;
     padding: 35px;
     gap: 25px;
-    flex-direction: column;
 }
-.box-item2 {    
+
+.box-item2 {
     display: flex;
     width: 380px;
     padding: 35px;
@@ -200,51 +206,152 @@ box-shadow: 15px 25px 56px 6px rgba(0, 0, 0, 0.06);
     flex-direction: column;
 }
 
-.box-item3 {    
+.box-item3 {
     display: flex;
     width: 380px;
     padding: 35px;
     gap: 25px;
     flex-direction: column;
 }
+
 .box-item__title {
     color: #000;
-font-family: Gilroy-Bold;
-font-size: 24px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+    font-family: Gilroy-Bold;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
+
 .box-item__text {
     color: #666;
     font-family: Gilroy-Regular;
     font-size: 15px;
     font-style: normal;
     font-weight: 400;
-    line-height: 150%; /* 22.5px */
+    line-height: 150%;
+    /* 22.5px */
 }
+
 .box-item__reff {
     color: #000;
-font-family: Gilroy-Bold;
-font-size: 11px;
-font-style: normal;
-font-weight: 400;
-line-height: 150%; /* 16.5px */
-text-decoration: none;
-/* padding-top: 10px; */
+    font-family: Gilroy-Bold;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    /* 16.5px */
+    text-decoration: none;
+    /* padding-top: 10px; */
 }
+
 .box-item__icon {
     width: 70px;
 }
+
+.section3 {
+    background-color: #963939;
+}
+
 .section3-header {
-    width: 580px;
-    margin-top: 180px;
+    display: flex;
+    align-items: center;
     margin-left: auto;
     margin-right: auto;
+    /* text-align: center; */
+    width: 580px;
+    margin-top: 180px;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.section3-header__text {
     color: #000;
-font-family: Gilroy-Bold;
-font-size: 45px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+    font-family: Gilroy-Bold;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.section3-header__itemtext {
+    color: #666;
+    text-align: center;
+    font-family: Gilroy-Regular;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    /* 24px */
+    width: 682px;
+}
+.center{
+    max-width: 1180px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.section3-content {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 30px;
+
+}
+
+.section3-item__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 50px;
+    width: 370px;
+}
+
+.section3-item__wrapper {
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    gap: 30px;
+    align-items: center;
+}
+
+.section3-content__title {
+    color: #000;
+    font-family: Gilroy-Bold;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.section3-content__text {
+    color: #AAA;
+    text-align: center;
+    font-family: Gilroy-Regular;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    /* 22.5px */
+}
+
+.section3-button {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 15px 35px;
+    border-radius: 50px;
+    background: #F25822;
+    box-shadow: 4px 4px 8px 0px rgba(242, 88, 34, 0.20);
+    border: none;
+    color: #FFF;
+    font-family: Gilroy-Bold;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    /* width: 150px; */
 }
