@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="./assets/styles/style.css">
 </head>
 
-<body>
-    <div class="header">
+<body class="bodystyle">
+    <div class="header center">
         <header class="header__header">
             <div>
                 <img src="./assets/imgs/head_im1.svg" alt="">
@@ -38,7 +38,11 @@
         </header>
     </div>
     <section1 class="section1 center">
-        <img class="img" src="./assets/imgs/sect1 1.png" alt="">
+        <picture>
+            <source media="(min-width: 375px) and (max-width: 767px)" srcset="./assets/imgs/sect1_1_tablet.png">
+            <img class="img" src="./assets/imgs/sect1 1.png" alt="">
+        </picture>
+        
         <div class="section__content">
             <p class="title">
                 THE BRAND
@@ -49,29 +53,58 @@
 
     </section1>
     <section2 class="categories center">
-        <div class="section2-content">
-            <img src="./assets/imgs/sect2_img1.png" alt="девушка">
+        <div class="section2-content ">
+            <div class="image-txt-wrapper">
+                <picture >
+                    <source media="(min-width: 375px) and (max-width: 767px)" srcset="./assets/imgs/sect2_img1_tablet.png">
+                    <img src="./assets/imgs/sect2_img1.png" alt="девушка">
+                    <div class="image-bg">  </div>
+                </picture>                
+            </div>
+
             <div class="txt">
                 <p class="sale-txt">30% OFF</p>
                 <p class="category-txt"> FOR WOMEN</p>
             </div>
+            
         </div>
         <div class="section2-content">
-            <img src="./assets/imgs/sect2_img2.png" alt="девушка">
+            <div class="image-txt-wrapper">
+                <picture>
+                    <source media="(min-width: 375px) and (max-width: 767px)" srcset="./assets/imgs/sect2_img2_tablet.png">
+                    <img src="./assets/imgs/sect2_img2.png" alt="парень">
+                    <div class="image-bg">  </div>
+                </picture>
+            </div>
+
             <div class="txt">
                 <p class="sale-txt">HOT DEAL</p>
                 <p class="category-txt">FOR MEN</p>
             </div>
         </div>
         <div class="section2-content">
-            <img src="./assets/imgs/sect2_img3.png" alt="девушка">
+            <div class="image-txt-wrapper">
+                <picture>
+                    <source media="(min-width: 375px) and (max-width: 767px)" srcset="./assets/imgs/sect2_img3_tablet.png">
+                    <img src="./assets/imgs/sect2_img3.png" alt="ребенок">
+                    <div class="image-bg">  </div>
+                </picture>
+            </div>
+
+            
             <div class="txt">
                 <p class="sale-txt">NEW ARRIVALS</p>
                 <p class="category-txt"> FOR KIDS</p>
             </div>
         </div>
         <div class="section2-content__4">
-            <img src="./assets/imgs/sect2_img4.png" alt="девушка">
+            <div class="image-txt-wrapper">
+                <picture>
+                    <source media="(min-width: 375px) and (max-width: 767px)" srcset="./assets/imgs/sect2_img4_tablet.png">
+                    <img src="./assets/imgs/sect2_img4.png" alt="вещи">
+                    <div class="image-bg">  </div>
+                </picture>
+            </div>           
             <div class="txt">
                 <p class="sale-txt">LUXIROUS & TRENDY</p>
                 <p class="category-txt">ACCESORIES</p>
@@ -88,9 +121,14 @@
     </div>
     <div class="section3 center">
         <section3 class="section3-content">
-            <div>
-                <img src="./assets/imgs/sect3_img1.png" alt="">
-                <div class="shadowBox">
+            <div >
+                <div>                    
+                    <img src="./assets/imgs/sect3_img1.png" alt="мужик">                 
+                                     
+                    
+                </div>               
+
+                <div class="shadowBox" >
                     <h4 class="section3-content__title">
                         ELLERY X M'O CAPSULE
                     </h4>
@@ -104,7 +142,7 @@
             </div>
 
             <div>
-                <img src="./assets/imgs/sect3_img2.png" alt="">
+                <img src="./assets/imgs/sect3_img2.1.png" alt="девушка в черном">
                 <!-- <img src="./assets/imgs/sect3_img2.1.png" alt=""> -->
                 <div class="shadowBox">
                     <h4 class="section3-content__title">
@@ -120,7 +158,7 @@
             </div>
 
             <div >
-                <img src="./assets/imgs/sect3_img3.png" alt="">
+                <img src="./assets/imgs/sect3_img3.png" alt="девушка в синем">
                 <div class="shadowBox">
                     <h4 class="section3-content__title">
                         ELLERY X M'O CAPSULE
@@ -134,7 +172,7 @@
                 </div>
             </div>
             <div >
-                <img src="./assets/imgs/sect3_img4.png" alt="">
+                <img src="./assets/imgs/sect3_img4.png" alt="девушка в полосатом">
                 <div class="shadowBox">
                     <h4 class="section3-content__title">
                         ELLERY X M'O CAPSULE
