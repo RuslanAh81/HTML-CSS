@@ -1,4 +1,9 @@
 
+
+/* Не успел все доделать не могу сообразить как сделать выпадающее меню
+в хедере */
+
+
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
 
 html {
@@ -22,6 +27,72 @@ html {
     margin-left: 30px;
 }
 
+.header-img {
+    position: relative;
+    display: flex;
+    column-gap: 20px;
+}
+/* .menu__menu {
+    display: none;
+    position: fixed;
+    background-color: #FFF;
+    width: 100px;
+    height: 800px;
+} */
+.menu {
+position: relative;
+}
+.menu::after {
+    content: "MENU";
+    font-size: 40px;
+    font-weight: 600;
+    position: fixed;
+    width: 200px;
+    height: 300px;
+    background-color: #FFF;
+    display: none;
+}
+.menu:hover::after {
+    display: block;
+}
+
+.menu ul li a {
+    position: relative;
+    color: #FFF;
+    padding: 20px;
+    /* box-sizing: border-box; */
+    transition: 1s;
+}
+.menu ul li a:hover {
+    position: fixed;   
+    top: 0;
+    left: 0;
+    width: 500px;
+    height: 100%;
+    background: #9F9F9F;
+    color: #000;
+}
+
+
+.basket {
+    position: relative;
+}
+.basket::after {
+    content: '5';
+    font-size: 10px;
+    padding: 5px 8px;
+    color: #FFF;
+    /* width: 15px;
+    height: 15px; */
+    border-radius: 50%;
+    position: absolute;
+    /* right: -10; */
+    left: 20px;
+    bottom: 20px;
+    background-color: #F16D7F;
+   
+}
+
 .header__header {
     display: flex;
     justify-content: space-between;
@@ -30,12 +101,14 @@ html {
     margin: auto;
     height: 75px;
 }
-
-.section1 {
+.background-color {
     background-color: #F1E4E6;
+}
+.section1 {   
+    background-color: #F1E4E6; 
     display: flex;
     align-items: center;
-    max-width: 1600px;
+    /* max-width: 1600px; */
 }
 
 .img {
@@ -81,6 +154,10 @@ font-style: normal;
 font-weight: 700;
 line-height: normal;
 }
+
+
+ /* Section2*/
+
 
 .categories {
     margin-top: 100px;
@@ -198,7 +275,45 @@ line-height: normal;
     line-height: normal;
     padding-left: 16px;
 } 
+.sect3-item__img {
+    position: relative;
+}
 
+.sect3-item__img::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(33, 22, 22, 0.7);
+    display: none;
+}
+
+.sect3-item__img:hover::after {
+    display: block;
+}
+
+.sect3-item__btn {
+    display: none;
+    width: 139px;
+    height: 44px;   
+    justify-content: center;
+    align-items: center;
+    gap: 11px;
+    border: 2px solid white;
+    color: white;
+    background-color: inherit; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);   
+    z-index: 1;
+}
+
+.sect3-item__img:hover .sect3-item__btn {
+    display: flex;
+}
 .section3-content__title {
     margin-top: 24px;
     color: #000;
@@ -241,6 +356,11 @@ line-height: normal;
     width: 214px;
     padding: 15px;
 }
+.button-txt:hover {
+    background-color: #F16D7F;
+    color: #FFF;
+
+}
 
 /* .image-txt-wrapper {
     position: relative;
@@ -264,6 +384,206 @@ line-height: normal;
     height: 100%;
     background-color: rgba(110, 108, 103, 0.7);
 }
+
+/* Section4 */
+
+.background-color4 {
+    background-color: #222224;
+}
+.section-4 {
+    margin-top: 50px;
+    display: flex;
+    column-gap: 60px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.items-content {
+    margin: 90px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.sect4-txt {
+    color: #FBFBFB;
+font-family: Lato;
+font-size: 19.96px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+/* text-align: center; */
+margin-top: 30px;
+}
+.sect4-txt__small {
+    color: #FBFBFB;
+text-align: center;
+font-family: Lato;
+font-size: 13.972px;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+max-width: 360px;
+margin-top: 20px;
+
+}
+
+/* Section5 */
+
+.background-color5 {
+    /* position: relative; */
+    height: 500px;
+    background-image: url('../imgs/Subscribe_BG_blend.png'), url('../imgs/Subscribe_BG.png');
+    background-blend-mode: lighten;
+    background-position: center;
+    background-size: cover;
+   
+}
+
+.subscribe__subscribe {   
+    display: flex;
+    z-index: 1;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+.subscribe-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 90px;
+}
+.subscribe-item img {
+    padding: 30px;
+    width: 96px;
+}
+.subscribe-txt {
+    color: #222224;
+text-align: center;
+font-family: Lato;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+max-width: 360px;
+}
+
+.subscribe-right__title {
+    font-size: 24px;
+    font-weight: 700px;
+    margin-bottom: 10px;
+}
+.subscribe-right__txt {
+    font-size: 18px;
+    font-weight: 400px;
+    margin-bottom: 20px;
+}
+.btn-wrapper {
+    border-radius: 50%;
+    /* width: 350px;
+    height: 50px; */
+    display: flex;
+    border: none;
+    /* padding: 7px 22px; */
+    /* background-color: #9F9F9F; */
+}
+.email {
+    border: none;
+    width: 290px;
+    height: 50px;
+    background-color: #E1E1E1;;
+    border-radius: 25px 0 0 25px;    
+}
+.submit {
+    border: none;
+    color: #FFF;
+    width: 100px;
+    height: 50px;
+    background-color: #F16D7F;
+    border-radius: 0 25px 25px 0;
+}
+.footer {
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.footer-txt {
+    color: #FBFBFB;
+font-family: Lato;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.facebook {
+position: relative;
+}
+.socials {
+    position: relative;
+    display: flex;
+    gap: 10px;
+}
+.facebook__icon {
+    position: absolute;
+    color: #F16D7F;
+    left: 10px;
+    top: 10px;
+}
+
+.facebook__icon svg:hover {
+    color: #1815d8;
+}
+
+.bg {
+    background-color: #FFF;
+    fill:#FFF
+}
+.bg:hover  {
+    background-color: #F16D7F;
+}
+
+.insta {
+    position: relative;
+}
+.insta:hover {
+    color: #F16D7F;
+}
+
+.insta__icon svg {
+    fill: black;
+    position: absolute; 
+    background-color: inherit;      
+    left: 9px;
+    top: 9px;
+}
+.insta__icon svg:hover {
+    /* display: block; */
+    
+    /* color: #FFF;  */
+    fill: #E1E1E1;
+    /* background-color: #F16D7F; */
+}
+.pinterest {
+    position: relative;
+}
+.pinterest__icon {
+    position: absolute;    
+    left: 10px;
+    top: 10px;
+}
+
+.twiter {
+    position: relative;
+}
+.twiter__icon {
+    position: absolute;
+    color: #F16D7F;
+    left: 10px;
+    top: 10px;
+}
+
 
 @media screen and (max-width:1439px) {
 
