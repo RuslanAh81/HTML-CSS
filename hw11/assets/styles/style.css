@@ -1,7 +1,5 @@
 
 
-/* Не успел все доделать не могу сообразить как сделать выпадающее меню
-в хедере */
 
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
@@ -32,17 +30,19 @@ html {
     display: flex;
     column-gap: 20px;
 }
-/* .menu__menu {
-    display: none;
-    position: fixed;
-    background-color: #FFF;
-    width: 100px;
-    height: 800px;
-} */
+
 .menu {
 position: relative;
 }
-.menu::after {
+.header_drop-down_menu {
+    display: none;
+    position: fixed;
+    top: 75px;
+    right: 0;
+    background-color: white;
+    z-index: 2;
+}
+/* .menu::after {
     content: "MENU";
     font-size: 40px;
     font-weight: 600;
@@ -54,28 +54,37 @@ position: relative;
 }
 .menu:hover::after {
     display: block;
+} */
+.stack:hover .header_drop-down_menu {
+    display: block;
 }
 
-.menu ul li a {
-    position: relative;
-    color: #FFF;
-    padding: 20px;
-    /* box-sizing: border-box; */
-    transition: 1s;
-}
-.menu ul li a:hover {
-    position: fixed;   
-    top: 0;
-    left: 0;
-    width: 500px;
-    height: 100%;
-    background: #9F9F9F;
+.drop-down_menu__title {
+    font-size: 14px;
     color: #000;
+    font-weight: 700;
+    margin: 20px 20px 10px;
 }
 
+.drop-down_menu__txt {
+    margin: 10px 20px;
+    color: #F16D7F;
+    font-size: 14px;
+    font-weight: 400;
+}
+.drop-down_menu__link {
+    margin-left: 40px;
+    margin-right: 40px;
+    color: #6F6E6E;
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+
+}
 
 .basket {
     position: relative;
+    
 }
 .basket::after {
     content: '5';
@@ -121,19 +130,14 @@ position: relative;
     padding-left: 16px;
 }
 
-.title {
-    /* display: flex;
-    align-items: center; */
+.title {   
     color: #222;
-    font-family: Lato
-        /*, sans-serif*/
-    ;
+    font-family: Lato;
     font-size: 48px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    margin: 0px;
-    /* width: 370px; */
+    margin: 0px;   
 
 }
 
@@ -192,7 +196,7 @@ line-height: normal;
 
 .txt {
     position: absolute;
-    top: 35%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%);
     text-align: center;
@@ -256,12 +260,10 @@ line-height: normal;
 }
 
 .section3-content {
-
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-   
+    grid-template-columns: repeat(3, 1fr);   
     gap: 30px;
-    margin-bottom: 48px;
+    margin-bottom: 42px;
 }
 
 .shadowBox {
@@ -322,7 +324,7 @@ line-height: normal;
 }
 
 .section3-txt {
-    margin-top: 16px;
+    margin: 16px 0 16px;
     color: #5D5D5D;
     font-size: 14px;
     font-weight: 300;
@@ -336,13 +338,13 @@ line-height: normal;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    margin-bottom: 20px;
 }
 
 .button-wrapper {
     display: flex;
     justify-content: center;
-    margin-top: 50px;
-
+    
 }
 
 .button-txt {
@@ -355,6 +357,7 @@ line-height: normal;
     border: 1px solid #FF6A6A;
     width: 214px;
     padding: 15px;
+    margin-bottom: 50px;
 }
 .button-txt:hover {
     background-color: #F16D7F;
@@ -415,6 +418,7 @@ line-height: normal;
 /* text-align: center; */
 margin-top: 30px;
 }
+
 .sect4-txt__small {
     color: #FBFBFB;
 text-align: center;
@@ -432,7 +436,7 @@ margin-top: 20px;
 
 .background-color5 {
     /* position: relative; */
-    height: 500px;
+    height: 400px;
     background-image: url('../imgs/Subscribe_BG_blend.png'), url('../imgs/Subscribe_BG.png');
     background-blend-mode: lighten;
     background-position: center;
@@ -452,10 +456,17 @@ margin-top: 20px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 90px;
+    margin-top: 40px;
+    /* margin-top: 53px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    text-align: center;
+    gap: 5px;
+    padding: 0 104px; */
 }
 .subscribe-item img {
-    padding: 30px;
+    padding: 20px;
     width: 96px;
 }
 .subscribe-txt {
@@ -467,6 +478,7 @@ font-style: normal;
 font-weight: 400;
 line-height: normal;
 max-width: 360px;
+margin-bottom: 40px;
 }
 
 .subscribe-right__title {
@@ -481,12 +493,9 @@ max-width: 360px;
 }
 .btn-wrapper {
     border-radius: 50%;
-    /* width: 350px;
-    height: 50px; */
     display: flex;
     border: none;
-    /* padding: 7px 22px; */
-    /* background-color: #9F9F9F; */
+
 }
 .email {
     border: none;
@@ -494,6 +503,7 @@ max-width: 360px;
     height: 50px;
     background-color: #E1E1E1;;
     border-radius: 25px 0 0 25px;    
+
 }
 .submit {
     border: none;
@@ -502,6 +512,7 @@ max-width: 360px;
     height: 50px;
     background-color: #F16D7F;
     border-radius: 0 25px 25px 0;
+
 }
 .footer {
     height: 100px;
@@ -639,6 +650,11 @@ position: relative;
     .header__header {
         max-width: 320px;
     }
+
+    .basket {
+        display: none;
+    }  
+
     .section1 {
         height: 363px;
     }
@@ -690,5 +706,60 @@ position: relative;
     }
     .item4-txt {
         top: 30%
+    }
+
+    .section-4 {
+        margin-top: 80px;
+        display: flex;
+        flex-direction: column;       
+        padding: 50px 10px;
+
+    }
+    .items-content {
+        margin: 18px;
+    }
+
+    .subscribe__subscribe {
+        flex-direction: column;
+    }
+
+    .footer {
+        flex-direction: column-reverse;
+        height: 150px;
+    }
+
+    .socials {
+        margin: 30px 10px 10px 10px;
+    }
+    .subscribe-txt {
+        font-size: 18px;
+    }
+
+    .subscribe-right__txt {
+        font-size: 14px;
+        font-weight: 400;
+    }
+    .email {
+        font-size: 14px;
+        font-weight: 400;
+        width: 230px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .section-4 {
+        margin-top: 80px;
+        flex-direction: column;
+        padding: 50px 0px;
+    }
+
+    .items-content {
+        margin: 15px;
+    }
+    .subscribe__subscribe {
+        flex-direction: column;
+    }
+    .background-color5 {
+        height: 580px;
     }
 }
